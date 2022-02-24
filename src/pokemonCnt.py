@@ -1,6 +1,6 @@
-import pokeCsv
+import pokemonCsvRead
 
-ans = pokeCsv.ans
+ans = pokemonCsvRead.ans
 cntWord=[0]*46
 
 for i in range(len(ans)):
@@ -8,5 +8,5 @@ for i in range(len(ans)):
         if ans[i][j] >= 'ｰ' and ans[i][j] <= 'ﾝ':
             cntTmp = ord(ans[i][j])-65392
             cntWord[cntTmp] += 1
-print("cntWord","\n")
+# print("cntWord","\n")
 print(cntWord)
