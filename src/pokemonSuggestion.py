@@ -64,6 +64,12 @@ def deleteList():
                 dList.append(listName[i])
     return dList
 
+# update suggestion list
+def updateSuggestList(i):
+    if i == 0:
+        return suggestList[i]
+    else:
+        return list(set(suggestList[i]) & set(suggestList[i-1]))
 
 # main process
 for i in range(10):
@@ -95,5 +101,7 @@ for i in range(10):
     currentList = list(set(currentList) & set(listName))
     
     suggestList.append(currentList)
+
+    suggestList[i] = updateSuggestList(i)
 
     print(suggestList[i])
