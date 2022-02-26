@@ -1,5 +1,6 @@
 from asyncio.windows_events import NULL
 import pokemonLenFive
+import pokemonFirstChoice
 
 # initializing lists
 pokeNameInput = []
@@ -72,6 +73,10 @@ def updateSuggestList(i):
         return list(set(suggestList[i]) & set(suggestList[i-1]))
 
 # main process
+print("first suggestion:")
+firstList = pokemonFirstChoice.ans
+print(firstList)
+
 for i in range(10):
     print(i)
     pokeNameInput.append(input())
