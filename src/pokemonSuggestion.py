@@ -1,6 +1,7 @@
 from asyncio.windows_events import NULL
 import pokemonLenFive
-import pokemonFirstChoice
+import pokemonValueWeighting
+import pokemonList
 
 # initializing lists
 pokeNameInput = []
@@ -12,6 +13,7 @@ listName = pokemonLenFive.ans
 suggestList = []
 delete_str = []
 word_point = []
+pokList = pokemonList.ans_list
 
 # making green list
 def greenList(i):
@@ -72,13 +74,22 @@ def updateSuggestList(i):
     else:
         return list(set(suggestList[i]) & set(suggestList[i-1]))
 
-# main process
-print("first suggestion:")
-firstList = pokemonFirstChoice.ans
-print(firstList)
+# Start main process
 
+# First suggestion
+print("first suggestion:")
+firstList = pokemonValueWeighting.ans_dict
+cnt = 0
+for i in firstList.keys():
+    print(cnt+1," ",i)
+    cnt += 1
+    if cnt >= 5:
+        break
+print()
+
+# main
 for i in range(10):
-    print(i)
+    print(i+1,"回目")
     pokeNameInput.append(input())
     gList = greenList(i)
     
