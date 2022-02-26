@@ -1,4 +1,10 @@
 # PokemonWordleSuggestion
+Explanation:
+This is an application that guesses the answer to pokemonWordle based on the entered Pokemon name, green location, and yellow location.
+
+ver 3 (2022/02/26)
+Addition one function
+・first suggestion list
 
 ver 2 (2022/02/25)
 Addition of the following functions.
