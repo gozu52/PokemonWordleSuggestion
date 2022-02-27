@@ -2,6 +2,12 @@
 Explanation:
 This is an application that guesses the answer to pokemonWordle based on the entered Pokemon name, green location, and yellow location.
 
+ver 4 (2022/02/28) 
+Change function 
+・Support for full-width characters 
+・Support for special characters ,the sonant mark (dakuten), P-sound consonant mark (handakuten), geminate consonant (sokuon) and contracted sound (youon) 
+・From all suggestions, weight the list of suggestions and suggest the top five 
+
 ver 3 (2022/02/26)
 Addition one function
 ・first suggestion list
