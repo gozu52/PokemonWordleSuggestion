@@ -207,3 +207,4 @@ for i in range(len(ans_list)):
 cntDict = sorted(cntDict.items(), key=lambda x: x[1], reverse=True)
 
 # print(ans_list)
+# print(cntDict)

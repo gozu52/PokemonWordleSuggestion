@@ -5,6 +5,7 @@ pokeList = pokemonList.ans_list
 dict = dict(pokemonList.cntDict)
 dictList = list(dict.keys())
 initialSelect = []
+# print(dictList)
 
 # List of Pokemon in order of the letters most frequently used.
 for i in range(len(dictList)):
