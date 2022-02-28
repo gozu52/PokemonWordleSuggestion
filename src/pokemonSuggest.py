@@ -22,12 +22,12 @@ def inputCheckPokemon():
 
 # Input check
 def inputCheckNumList():
-    zeroP = list(input("Enter yellow points: "))
+    zeroP = list(input("Enter zero points: "))
     if len(zeroP) != 5:
         print("Please enter 5 points.","\n")
         return inputCheckNumList()
     for p in range(len(zeroP)):
-        if not zeroP[p] == "1" or not zeroP[p] == "0":
+        if not zeroP[p] == "1" and not zeroP[p] == "0":
             print("Please enter 1 or 0.","\n")
             return inputCheckNumList()
     return zeroP  
