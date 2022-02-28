@@ -2,6 +2,7 @@ import pokemonList
 import pokemonValueWeighting
 
 # Initialize the list
+basePokeList = pokemonList.ans_list
 pokeList = pokemonList.ans_list
 yList = pokemonList.ans_list
 gList = pokemonList.ans_list
@@ -9,6 +10,28 @@ cntDict = dict(pokemonList.cntDict)
 weightingList = pokemonValueWeighting.ans_dict
 ansSuggest = []
 firstVal = []
+
+# Input check
+def inputCheckPokemon():
+    pokeName = input("Enter full-width katakana: ")
+    if not pokeName in basePokeList:
+        print("Please enter pokemon name.","\n")
+        return inputCheckPokemon()
+    else: 
+        return pokeName
+
+# Input check
+def inputCheckNumList():
+    zeroP = list(input("Enter yellow points: "))
+    if len(zeroP) != 5:
+        print("Please enter 5 points.","\n")
+        return inputCheckNumList()
+    for p in range(len(zeroP)):
+        if not zeroP[p] == "1" or not zeroP[p] == "0":
+            print("Please enter 1 or 0.","\n")
+            return inputCheckNumList()
+    return zeroP  
+
 
 # First suggestion
 print("first suggestion:")
@@ -26,9 +49,9 @@ for i in range(10):
     print(i+1,"回目")
 
     # Input each element
-    pokeName = input("Enter full-width katakana: ")
-    greenP = list(input("Enter green points: "))
-    yellowP = list(input("Enter yellow points: "))
+    pokeName = inputCheckPokemon()
+    greenP = inputCheckNumList()
+    yellowP = inputCheckNumList()
     
     # Logical sum
     zeroP = [max(t) for t in zip(greenP, yellowP)]
