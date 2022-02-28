@@ -11,7 +11,7 @@ weightingList = pokemonValueWeighting.ans_dict
 ansSuggest = []
 firstVal = []
 
-# Input check
+# Input check Pokemon name
 def inputCheckPokemon():
     pokeName = input("Enter full-width katakana: ")
     if not pokeName in basePokeList:
@@ -20,16 +20,28 @@ def inputCheckPokemon():
     else: 
         return pokeName
 
-# Input check
-def inputCheckNumList():
-    zeroP = list(input("Enter zero points: "))
+# Input check green
+def inputCheckGreen():
+    zeroP = list(input("Enter green points: "))
     if len(zeroP) != 5:
         print("Please enter 5 points.","\n")
-        return inputCheckNumList()
+        return inputCheckGreen()
     for p in range(len(zeroP)):
         if not zeroP[p] == "1" and not zeroP[p] == "0":
             print("Please enter 1 or 0.","\n")
-            return inputCheckNumList()
+            return inputCheckGreen()
+    return zeroP  
+
+# Input check yellow
+def inputCheckYellow():
+    zeroP = list(input("Enter yellow points: "))
+    if len(zeroP) != 5:
+        print("Please enter 5 points.","\n")
+        return inputCheckYellow()
+    for p in range(len(zeroP)):
+        if not zeroP[p] == "1" and not zeroP[p] == "0":
+            print("Please enter 1 or 0.","\n")
+            return inputCheckYellow()
     return zeroP  
 
 
@@ -50,8 +62,8 @@ for i in range(10):
 
     # Input each element
     pokeName = inputCheckPokemon()
-    greenP = inputCheckNumList()
-    yellowP = inputCheckNumList()
+    greenP = inputCheckGreen()
+    yellowP = inputCheckYellow()
     
     # Logical sum
     zeroP = [max(t) for t in zip(greenP, yellowP)]
