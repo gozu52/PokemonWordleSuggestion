@@ -182,6 +182,8 @@ csv_file = open('E:\PokeWordleSuggest\clonePokeWordleSuggest\PokemonWordleSugges
 a_list = []
 for row in csv.reader(csv_file):
     a_list.append(row[2])
+    if row[2] == "アルセウス":
+        break
 del a_list[0]
 
 # Making pokemon name list
