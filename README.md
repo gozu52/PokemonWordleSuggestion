@@ -6,7 +6,8 @@ ver 4 (2022/02/28)
 Change function 
 ・Support for full-width characters 
 ・Support for special characters ,the sonant mark (dakuten), P-sound consonant mark (handakuten), geminate consonant (sokuon) and contracted sound (youon) 
-・From all suggestions, weight the list of suggestions and suggest the top five 
+・From all suggestions, weight the list of suggestions and suggest the top five  
+・Input checker 
 
 ver 3 (2022/02/26)
 Addition one function
